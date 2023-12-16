@@ -1,10 +1,8 @@
 import "./App.css"
 import {useState} from "react"
 
-const list = []
-
 const List = () => {
-    const [ToDo, setToDo] = useState(list)
+    const [ToDo, setToDo] = useState([])
 
     const removeTaskHandler = (id) => {
         setToDo(
