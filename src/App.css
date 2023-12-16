@@ -67,12 +67,13 @@ section li{
     border-radius: 10px;
     padding: 20px;
     margin: 10px 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5)
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
 }
 
 section li p{
     font-size: 18px;
     font-weight: 600;
+    text-align: center;
 }
 
 article{
@@ -85,16 +86,18 @@ article{
     backdrop-filter: blur(5px);
 }
 
-#newNotePanel{
-    display: flex;
-    height: 200px;
-    width: 500px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 1)
+.newNotePanel{
+    display: none;
+}
+
+.newNotePanel.open{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
 }
 
 input{
@@ -103,4 +106,8 @@ input{
     border: none;
     border-radius: 5px;
     width: 97.5%;
+}
+
+form h3, form h1{
+  padding: 10px 0px;
 }

@@ -1,49 +1,23 @@
 import "./App.css"
-import {useState} from "react"
+import { useState } from "react"
 
-const List = () => {
-    const [ToDo, setToDo] = useState([])
+const List = ({ tasks, setTasks }) => {
+  const removeTaskHandler = (id) => {
+    setTasks(tasks.filter(task => task.id !== id))
+  }
 
-    const removeTaskHandler = (id) => {
-        setToDo(
-            ToDo.filter(
-                task => {
-                    return task.id !== id
-                }
-            )
-        )
-    }
-
-    const [id, setId] = useState(0)
-
-    const idHandler = () => {
-        setId((prevId) => prevId + 1)
-    }
-
-    const addTaskHandler = () => {
-        const newTask = {
-            id: id,
-            text: "Test"
-        }
-        setToDo(...ToDo, newTask)
-    }
-
-    return(
-        <section>
-            <ul>
-                {
-                    ToDo.map(
-                        task => {
-                            <li key={task.id}>
-                                {task.text}
-                                <button onClick={()=>removeTaskHandler(task.id)}>Usuń</button>
-                            </li>
-                        }
-                    )
-                }
-            </ul>
-        </section>
-    )
+  return (
+    <section>
+      <ul>
+        {tasks.map((task) => (
+          <li key={task.id}>
+            <p>{task.text}</p>
+            <button onClick={() => removeTaskHandler(task.id)}>Usuń</button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
 }
 
 export default List
