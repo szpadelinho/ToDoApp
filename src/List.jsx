@@ -11,8 +11,10 @@ const List = ({ tasks, setTasks }) => {
       <ul>
         {tasks.map((task) => (
           <li key={task.id}>
-            <p>{task.text}</p>
-            <button onClick={() => removeTaskHandler(task.id)}>Usuń</button>
+            <div className="listFlex">
+              <p>{task.text}</p>
+              <button onClick={() => removeTaskHandler(task.id)}>Usuń</button>
+            </div>
           </li>
         ))}
       </ul>
