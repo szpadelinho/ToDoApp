@@ -13,6 +13,7 @@ const List = ({ tasks, setTasks }) => {
           <li key={task.id}>
             <div className="listFlex">
               <p>{task.text}</p>
+              <p id="date">{task.day}.{task.month}.{task.year} - {task.hour}:{task.minute}</p>
               <button onClick={() => removeTaskHandler(task.id)}>Usuń</button>
             </div>
           </li>

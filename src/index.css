@@ -41,12 +41,6 @@ button {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: 0.25s;
-  box-shadow: 0;
-}
-button:hover {
-  border-color: rgba(236, 11, 67, .5);
-  box-shadow: rgba(236, 11, 67, 1)
 }
 button:focus,
 button:focus-visible {

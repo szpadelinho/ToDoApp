@@ -8,7 +8,7 @@ const Header = ({ onAddTask, openPanel }) => {
       <div className="headerText">
         <h1>ToDoApp</h1>
         <h2>Witaj, użytkowniku!</h2>
-        <button onClick={() => openPanel()}>Dodaj notatkę</button>
+        <button id="add" onClick={() => openPanel()}>Dodaj notatkę</button>
       </div>
     </header>
   )
